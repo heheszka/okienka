@@ -1,0 +1,207 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+    background: #f1f5f9;
+    color: #0f172a;
+    padding: 16px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+    
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+h1 {
+    font-size: 1.3rem;
+}
+
+#zegar {
+    font-size: 0.9rem;
+    color: #64748b;
+    font-weight: 600;
+}
+
+/* Pasek przełączania tygodnia */
+.kontrolki {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+button {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #cbd5e1;
+    background: #fff;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+button.aktywny {
+    background: #1e293b;
+    color: #fff;
+    border-color: #1e293b;
+}
+
+/* Karty znajomych */
+.lista {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.karta {
+    background: #fff;
+    padding: 14px;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    border-left: 6px solid #cbd5e1;
+}
+    
+/* Kolory statusów */
+.karta.okienko {
+    border-left-color: #22c55e;
+    background: #f0fdf4;
+}
+
+.karta.zajecia {
+    border-left-color: #ef4444;
+}
+.karta.przed {
+    border-left-color: #f59e0b;
+}
+.karta.po {
+    border-left-color: #94a3b8;
+    opacity: 0.75;
+}
+.karta.wolne {
+    border-left-color: #cbd5e1;
+    opacity: 0.65;
+}
+
+.naglowek-karty {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 4px;
+}
+
+.imie {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.kierunek {
+    font-size: 0.8rem;
+    color: #64748b;
+}
+
+.status {
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+}
+
+.karta.okienko .status {
+    color: #15803d;
+}
+
+.karta.zajecia .status {
+    color: #b91c1c;
+}
+
+.szczegoly {
+    font-size: 0.85rem;
+    color: #475569;
+}
+
+/* rozwijanie szczegółów po kliknięciu karty */
+
+.karta {
+    cursor: pointer;
+    transition: transform 0.1s ease;
+}
+.karta:active {
+    transform: scale(0.99);
+}
+
+.pelny-plan {
+    display: none;
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px dashed #cbd5e1;
+    font-size: 0.85rem;
+}
+
+.karta.rozwinieta .pelny-plan {
+    display: block;
+}
+
+.dzien-naglowek {
+    font-weight: 700;
+    color: #1e293b;
+    margin-top: 8px;
+    margin-bottom: 4px;
+}
+
+.wiersz-zajec {
+    display: flex;
+    justify-content: space-between;
+    padding: 3px 0;
+    color: #334155;
+}
+
+/* kolorki zajec */
+.wiersz-zajec {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 8px;
+    margin-bottom: 4px;
+    border-radius: 6px;
+    border-left: 4px solid #94a3b8;
+    color: #334155;
+}
+
+.tag-kategoria {
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-left: 6px;
+    text-transform: uppercase;
+}
+
+/* Ćwiczenia -> CZERWONY */
+.kat-cwiczenia { border-left-color: #ef4444; background: #fef2f2; }
+.kat-cwiczenia .tag-kategoria { background: #fee2e2; color: #b91c1c; }
+
+/* Wykład -> NIEBIESKI */
+.kat-wyklad { border-left-color: #3b82f6; background: #eff6ff; }
+.kat-wyklad .tag-kategoria { background: #dbeafe; color: #1d4ed8; }
+
+/* Wykład zdalny -> FIOLETOWY */
+.kat-wyklad-zdalny { border-left-color: #a855f7; background: #faf5ff; }
+.kat-wyklad-zdalny .tag-kategoria { background: #f3e8ff; color: #7e22ce; }
+
+/* Laboratorium -> POMARAŃCZOWY */
+.kat-laboratorium { border-left-color: #f97316; background: #fff7ed; }
+.kat-laboratorium .tag-kategoria { background: #ffedd5; color: #c2410c; }
+
+/* Lektorat -> ŻÓŁTY */
+.kat-lektorat { border-left-color: #eab308; background: #fefce8; }
+.kat-lektorat .tag-kategoria { background: #fef08a; color: #854d0e; }
+
+/* Domyślny (WF, lektorat, inne) -> SZARY */
+.kat-inne { border-left-color: #94a3b8; background: #f8fafc; }
+.kat-inne .tag-kategoria { background: #e2e8f0; color: #475569; }

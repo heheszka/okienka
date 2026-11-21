@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Okienka na Studiach</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="stylesheet.css">
+    <meta name="theme-color" content="#1e293b">
+    <link rel="apple-touch-icon" href="images/ikona-512.png">
+</head>
+<body>
+    <header>
+        <h1>Kto ma okienko?</h1>
+        <div id="zegar">--:--</div>
+    </header>
+
+    <div class="kontrolki">
+        <button id="btn-auto" class="aktywny" onclick="ustawTydzien(null)">Auto tydzień</button>
+        <button id="btn-parz" onclick="ustawTydzien('parzysty')">Parzysty</button>
+        <button id="btn-nieparz" onclick="ustawTydzien('nieparzysty')">Nieparzysty</button>
+    </div>
+
+    <div id="lista-znajomych" class="lista"></div>
+
+    <script src="plany.js"></script>
+    <script src="app.js"></script>
+    <script src="ui.js"></script>
+</body>
+</html>
