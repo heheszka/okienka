@@ -43,8 +43,10 @@ function generujHtmlPelnegoPlanu(zajecia) {
     const aktywnyTydzien = wybranyTydzien || pobierzTypTygodnia(new Date());
     let html = "";
 
-    // Sprawdzamy dni od Poniedziałku (1) do Piątku (5)
-    for (let dzien = 1; dzien <= 5; dzien++) {
+    // Kolejność wyświetlania dni: od Poniedziałku (1) do Soboty (6), a na końcu Niedziela (0)
+    const kolejnoscDni =new Array(1, 2, 3, 4, 5, 6, 0);
+
+    kolejnoscDni.forEach(dzien => {
         const zajeciaDnia = zajecia
             .filter(z => z.dzien === dzien)
             .filter(z => z.tydzien === "wszystkie" || z.tydzien === aktywnyTydzien)
@@ -64,10 +66,11 @@ function generujHtmlPelnegoPlanu(zajecia) {
                 `;
             });
         }
-    }
+    });
 
     return html || "<div style='color:#64748b'>Brak zajęć w tym tygodniu</div>";
 }
+
 
 function odswiezEkran() {
     const teraz = new Date();

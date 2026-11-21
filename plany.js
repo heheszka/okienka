@@ -1034,6 +1034,14 @@ const planyZnajomych = [
                 kategoria: "ćwiczenia",
                 tydzien: "wszystkie"
             },
+            {
+                dzien: 1,
+                start: "17:00",
+                koniec: "18:30",
+                przedmiot: "AZS szermierka",
+                kategoria: "inne",
+                tydzien: "wszystkie"
+            },
             // Wtorek (2) - brak zajęć
             // Środa (3)
             {
@@ -1121,11 +1129,31 @@ const planyZnajomych = [
             // Piątek (5)
             {
                 dzien: 5,
-                start: "08:00",
-                koniec: "09:30",
-                przedmiot: "WF",
-                sala: "Hala, bud. U13",
-                kategoria: "WF",
+                start: "18:00",
+                koniec: "22:00",
+                przedmiot: "sesja RPG",
+                sala: "Discord",
+                kategoria: "inne",
+                tydzien: "wszystkie"
+            },
+            // Sobota (6)
+            {
+                dzien: 6,
+                start: "18:00",
+                koniec: "20:00",
+                przedmiot: "korki z matmy",
+                sala: "Discord",
+                kategoria: "inne",
+                tydzien: "wszystkie"
+            },
+            // Niedziela (0)
+            {
+                dzien: 0,
+                start: "18:00",
+                koniec: "22:00",
+                przedmiot: "sesja RPG",
+                sala: "Discord",
+                kategoria: "inne",
                 tydzien: "wszystkie"
             }
         ]
