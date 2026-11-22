@@ -4,7 +4,7 @@ const wydarzenia = new Array(
     { miesiac: 11, dzien: 19, nazwa: "Akademikowy Zlot Cweli i Cwelinek", typ: "impreza" },
     { miesiac: 11, dzien: 28, nazwa: "Szondrzejki", typ: "impreza" },
 
-    // --- ŚWIĘTA STAŁE  ---
+    // --- ŚWIĘTA STAŁE ---
     { miesiac: 1, dzien: 1, nazwa: "Nowy Rok", typ: "swieto" },
     { miesiac: 1, dzien: 6, nazwa: "Trzech Króli", typ: "swieto" },
     { miesiac: 5, dzien: 1, nazwa: "Święto Pracy", typ: "swieto" },
@@ -13,7 +13,7 @@ const wydarzenia = new Array(
     { miesiac: 11, dzien: 11, nazwa: "Święto Niepodległości", typ: "swieto" },
     { miesiac: 12, dzien: 24, nazwa: "Wigilia Bożego Narodzenia", typ: "swieto" },
     { miesiac: 12, dzien: 25, nazwa: "Boże Narodzenie (1. dzień)", typ: "swieto" },
-    { miesiac: 12, dzien: 26, nazwa: "Boże Narodzenie (2. dzień)", typ: "swieto" },
+    { miesiac: 12, dzien: 26, nazwa: "Boże Narodzenie (2. dzień)", typ: "swieto" }
 );
 
 const nazwyMiesiecy = new Array(
@@ -57,10 +57,10 @@ function aktualizujOdliczanie() {
         elOpis.textContent = `Udanej imprezy: ${najblizsza.nazwa}!`;
     } else if (najblizsza.dni === 1) {
         elLiczba.textContent = "1 dzień";
-        elOpis.textContent = `Jutro (${najblizsza.dzien} ${nazwyMiesiecy[najblizsza.miesiac - 1].toLowerCase()})`;
+        elOpis.textContent = `Jutro (${najblizsza.dzien} ${nazwyMiesiecy.at(najblizsza.miesiac - 1).toLowerCase()})`;
     } else {
         elLiczba.textContent = `${najblizsza.dni} dni`;
-        elOpis.textContent = `${najblizsza.dzien} ${nazwyMiesiecy[najblizsza.miesiac - 1].toLowerCase()} ${najblizsza.data.getFullYear()}`;
+        elOpis.textContent = `${najblizsza.dzien} ${nazwyMiesiecy.at(najblizsza.miesiac - 1).toLowerCase()} ${najblizsza.data.getFullYear()}`;
     }
 }
 
@@ -75,7 +75,7 @@ function generujKalendarz() {
     const miesiac = teraz.getMonth(); // 0-11
     const dzisiaj = teraz.getDate();
 
-    naglowek.textContent = `${nazwyMiesiecy[miesiac]} ${rok}`;
+    naglowek.textContent = `${nazwyMiesiecy.at(miesiac)} ${rok}`;
     siatka.innerHTML = "";
     legenda.innerHTML = "";
 
@@ -123,9 +123,50 @@ function generujKalendarz() {
     });
 }
 
+async function sprawdzPrzypomnienieOImprezie() {
+    if (!("Notification" in window)) return;
+
+    // Prosimy o zgodę na powiadomienia przy pierwszym wejściu
+    if (Notification.permission === "default") {
+        await Notification.requestPermission();
+    }
+    if (Notification.permission !== "granted") return;
+
+    const teraz = new Date();
+    const dzisPolnoc = new Date(teraz.getFullYear(), teraz.getMonth(), teraz.getDate());
+    const dzisKlucz = dzisPolnoc.toISOString().slice(0, 10);
+
+    // Sprawdzamy tylko wydarzenia z typ: "impreza" (pomijamy święta)
+    const imprezy = wydarzenia.filter(w => w.typ === "impreza");
+
+    imprezy.forEach(imp => {
+        const dataImp = new Date(teraz.getFullYear(), imp.miesiac - 1, imp.dzien);
+        const roznicaDni = Math.round((dataImp - dzisPolnoc) / (1000 * 60 * 60 * 24));
+        const kluczPowiadomienia = `przypomnienie_${imp.nazwa}_${dzisKlucz}`;
+
+        // Jeśli impreza jest DZIŚ (0) lub JUTRO (1) i jeszcze dziś nie przypominano
+        if ((roznicaDni === 0 || roznicaDni === 1) && !localStorage.getItem(kluczPowiadomienia)) {
+            const tekst = roznicaDni === 0
+                ? `🎉 Dzisiaj: ${imp.nazwa}!`
+                : `⏰ Przypomnienie: Jutro ${imp.nazwa}!`;
+
+            new Notification("Okienka na Studiach", {
+                body: tekst,
+                icon: "images/ikona-192.png"
+            });
+
+            localStorage.setItem(kluczPowiadomienia, "wyslano");
+        }
+    });
+}
+
+// Uruchamiamy wszystko od razu i sprawdzamy co minutę
 aktualizujOdliczanie();
 generujKalendarz();
+sprawdzPrzypomnienieOImprezie();
+
 setInterval(() => {
     aktualizujOdliczanie();
     generujKalendarz();
+    sprawdzPrzypomnienieOImprezie();
 }, 60000);
