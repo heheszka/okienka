@@ -1,12 +1,14 @@
-const NAZWA_CACHE = "okienka-v1";
+const NAZWA_CACHE = "okienka-v2";
 
 const plikiDoZapisu = new Array(
     "./",
     "index.html",
-    "stylesheet.css",
+    "style1.css",
+    "style2.css",
     "plany.js",
     "app.js",
     "ui.js",
+    "odliczanie.js",
     "manifest.json",
     "images/ikona-192.png",
     "images/ikona-512.png"

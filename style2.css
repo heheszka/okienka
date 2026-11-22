@@ -1,0 +1,29 @@
+/* Karta odliczania do wydarzenia */
+.karta-odliczanie {
+    background: linear-gradient(135deg, #eb25bd, #7c3aed);
+    color: #ffffff;
+    padding: 24px 20px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+    margin-bottom: 16px;
+}
+
+.odliczanie-tytul {
+    font-size: 0.95rem;
+    font-weight: 600;
+    opacity: 0.9;
+    margin-bottom: 6px;
+}
+
+.odliczanie-liczba {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 6px;
+}
+
+.odliczanie-opis {
+    font-size: 0.85rem;
+    opacity: 0.85;
+}

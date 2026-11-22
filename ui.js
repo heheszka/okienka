@@ -121,3 +121,17 @@ function odswiezEkran() {
 
 odswiezEkran();
 setInterval(odswiezEkran, 30000);
+
+function zmienEkran(idEkranu, kliknietyPrzycisk) {
+    // Ukryj wszystkie ekrany i pokaż wybrany
+    document.querySelectorAll('.ekran').forEach(e => e.classList.remove('aktywny'));
+    document.getElementById(idEkranu).classList.add('aktywny');
+
+    // Zmień podświetlenie przycisku na dolnym pasku
+    document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('aktywny'));
+    kliknietyPrzycisk.classList.add('aktywny');
+
+    // Przewiń na samą górę po zmianie zakładki
+    window.scrollTo(0, 0);
+}
+

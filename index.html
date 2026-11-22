@@ -5,28 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Okienka na Studiach</title>
     <link rel="manifest" href="manifest.json">
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="style2.css">
     <meta name="theme-color" content="#f1f5f9">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <link rel="apple-touch-icon" href="images/ikona-512.png">
 </head>
 <body>
-    <header>
-        <h1>Kto ma okienko?</h1>
-        <div id="zegar">--:--</div>
-    </header>
+    <!-- EKRAN 1: Główny (Okienka) -->
+    <div id="ekran-okienka" class="ekran aktywny">
+        <header>
+            <h1>Kto ma okienko?</h1>
+            <div id="zegar">--:--</div>
+        </header>
 
-    <div class="kontrolki">
-        <button id="btn-auto" class="aktywny" onclick="ustawTydzien(null)">Auto tydzień</button>
-        <button id="btn-parz" onclick="ustawTydzien('parzysty')">Parzysty</button>
-        <button id="btn-nieparz" onclick="ustawTydzien('nieparzysty')">Nieparzysty</button>
+        <div class="kontrolki">
+            <button id="btn-auto" class="aktywny" onclick="ustawTydzien(null)">Auto tydzień</button>
+            <button id="btn-parz" onclick="ustawTydzien('parzysty')">Parzysty</button>
+            <button id="btn-nieparz" onclick="ustawTydzien('nieparzysty')">Nieparzysty</button>
+        </div>
+
+        <div id="lista-znajomych" class="lista"></div>
     </div>
 
-    <div id="lista-znajomych" class="lista"></div>
+    <!-- EKRAN 2: Plan / Odliczanie -->
+    <div id="ekran-drugi" class="ekran">
+        <header>
+            <h1>Kiedy kolejne chlanie?</h1>
+        </header>
+        
+        <div class="karta-odliczanie">
+            <div class="odliczanie-tytul">Do Szondrzejek zostało</div>
+            <div id="licznik-dni" class="odliczanie-liczba">--</div>
+            <div id="licznik-szczegoly" class="odliczanie-opis">28 listopada</div>
+        </div>
+    </div>
+
+
+    <!-- EKRAN 3: Pusta zakładka -->
+    <div id="ekran-trzeci" class="ekran">
+        <header>
+            <h1>Zakładka 3</h1>
+        </header>
+        <p style="color: #64748b;">67 i do pieca</p>
+    </div>
+
+    <!-- DOLNY PASEK NAWIGACJI -->
+    <nav class="dolny-pasek">
+        <button class="nav-btn aktywny" onclick="zmienEkran('ekran-okienka', this)">
+            <span class="nav-ikona">🕒</span>
+            <span>Okienka</span>
+        </button>
+        <button class="nav-btn" onclick="zmienEkran('ekran-drugi', this)">
+            <span class="nav-ikona">📅</span>
+            <span>Plan</span>
+        </button>
+        <button class="nav-btn" onclick="zmienEkran('ekran-trzeci', this)">
+            <span class="nav-ikona">⚙️</span>
+            <span>Inne</span>
+        </button>
+    </nav>
 
     <script src="plany.js"></script>
     <script src="app.js"></script>
     <script src="ui.js"></script>
+    <script src="odliczanie.js"></script>
     <script>
         if ("serviceWorker" in navigator) {
         navigator.serviceWorker.register("sw.js");
