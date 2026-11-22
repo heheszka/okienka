@@ -43,7 +43,7 @@ function sprawdzStatusOsoby(osoba, wymuszonyTydzien = null) {
 
     if (obecneZajecia) {
         const zostaloMinut = naMinuty(obecneZajecia.koniec) - aktualneMinuty;
-        const salaTekst = obecneZajecia.sala ? ` • Sala ${obecneZajecia.sala}` : "";
+        const salaTekst = obecneZajecia.sala ? ` • ${obecneZajecia.sala}` : "";
         return {
             status: "zajecia",
             etykieta: `Na zajęciach (do ${obecneZajecia.koniec})`,
@@ -58,7 +58,7 @@ function sprawdzStatusOsoby(osoba, wymuszonyTydzien = null) {
   // Przypadek C: Jeszcze przed pierwszymi zajęciami
     if (aktualneMinuty < pierwszeZajeciaStart) {
         const zaIleMinut = pierwszeZajeciaStart - aktualneMinuty;
-        const salaTekst = zajeciaDzis[0].sala ? ` • Sala ${zajeciaDzis[0].sala}` : "";
+        const salaTekst = zajeciaDzis[0].sala ? ` • ${zajeciaDzis[0].sala}` : "";
         return {
         status: "przed",
         etykieta: `Zaczyna o ${zajeciaDzis[0].start}`,

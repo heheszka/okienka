@@ -32,15 +32,6 @@ const planyZnajomych = [
                 kategoria: "wykład zdalny",
                 tydzien: "wszystkie"
             },
-            {
-                dzien: 2,
-                start: "18:30",
-                koniec: "20:00",
-                przedmiot: "Mikroekonomia",
-                sala: "Teams",
-                kategoria: "wykład zdalny",
-                tydzien: "wszystkie"
-            },
             // Środa (3)
             {
                 dzien: 3,

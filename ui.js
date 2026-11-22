@@ -1,5 +1,5 @@
 let wybranyTydzien = null;
-const otwarteKarty = new Set(); // Zapamiętuje, kogo użytkownik rozwinął
+const otwarteKarty = new Set();
 
 const priorytetStatusu = {
     okienko: 1,
