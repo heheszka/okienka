@@ -47,6 +47,7 @@ const planyZnajomych = [
                 start: "08:00",
                 koniec: "09:30",
                 przedmiot: "Podstawy ekonomii środowiska",
+                sala: "Paw.A 117",
                 kategoria: "ćwiczenia",
                 tydzien: "nieparzysty"
             },
@@ -55,6 +56,7 @@ const planyZnajomych = [
                 start: "09:45",
                 koniec: "11:15",
                 przedmiot: "Rachunkowość",
+                sala: "Paw.F 616",
                 kategoria: "ćwiczenia",
                 tydzien: "wszystkie"
             },
@@ -63,6 +65,7 @@ const planyZnajomych = [
                 start: "11:30",
                 koniec: "13:00",
                 przedmiot: "Finanse",
+                sala: "Paw.F 307",
                 kategoria: "ćwiczenia",
                 tydzien: "wszystkie"
             },
@@ -72,6 +75,7 @@ const planyZnajomych = [
                 start: "09:45",
                 koniec: "11:15",
                 przedmiot: "Matematyka",
+                sala: "Paw.F 515",
                 kategoria: "ćwiczenia",
                 tydzien: "wszystkie"
             },
@@ -80,6 +84,7 @@ const planyZnajomych = [
                 start: "11:30",
                 koniec: "13:00",
                 przedmiot: "Mikroekonomia",
+                sala: "Paw.C sala C",
                 kategoria: "ćwiczenia",
                 tydzien: "wszystkie"
             },
@@ -105,6 +110,7 @@ const planyZnajomych = [
                 start: "08:00",
                 koniec: "09:30",
                 przedmiot: "Podstawy prawa",
+                sala: "Teams",
                 kategoria: "wykład zdalny",
                 tydzien: "wszystkie"
             },
@@ -113,6 +119,7 @@ const planyZnajomych = [
                 start: "09:45",
                 koniec: "11:15",
                 przedmiot: "Finanse",
+                sala: "Teams",
                 kategoria: "wykład zdalny",
                 tydzien: "wszystkie"
             },
@@ -121,6 +128,7 @@ const planyZnajomych = [
                 start: "11:30",
                 koniec: "13:00",
                 przedmiot: "Podstawy ekonomii środowiska",
+                sala: "Teams",
                 kategoria: "wykład zdalny",
                 tydzien: "wszystkie"
             }

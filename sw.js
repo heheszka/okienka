@@ -1,0 +1,47 @@
+const NAZWA_CACHE = "okienka-v1";
+
+const plikiDoZapisu = new Array(
+    "./",
+    "index.html",
+    "stylesheet.css",
+    "plany.js",
+    "app.js",
+    "ui.js",
+    "manifest.json",
+    "images/ikona-192.png",
+    "images/ikona-512.png"
+);
+
+self.addEventListener("install", event => {
+    event.waitUntil(
+        caches.open(NAZWA_CACHE).then(cache => {
+        return cache.addAll(plikiDoZapisu);
+        })
+    );
+    self.skipWaiting();
+});
+
+self.addEventListener("activate", event => {
+    event.waitUntil(
+        caches.keys().then(klucze => {
+        return Promise.all(
+            klucze
+            .filter(klucz => klucz !== NAZWA_CACHE)
+            .map(klucz => caches.delete(klucz))
+        );
+        })
+    );
+    self.clients.claim();
+});
+
+self.addEventListener("fetch", event => {
+    event.respondWith(
+        fetch(event.request)
+        .then(odpowiedz => {
+            const kopia = odpowiedz.clone();
+            caches.open(NAZWA_CACHE).then(cache => cache.put(event.request, kopia));
+            return odpowiedz;
+        })
+        .catch(() => caches.match(event.request))
+    );
+});
