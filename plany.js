@@ -737,6 +737,24 @@ const planyZnajomych = [
                 przedmiot: "Kabaret",
                 kategoria: "inne",
                 tydzien: "wszystkie"
+            },
+            // Sobota (6)
+            {
+                dzien: 6,
+                start: "20:00",
+                koniec: "21:30",
+                przedmiot: "Kabaret",
+                kategoria: "inne",
+                tydzien: "wszystkie"
+            },
+            // Niedziela (0)
+            {
+                dzien: 0,
+                start: "20:00",
+                koniec: "21:30",
+                przedmiot: "Kabaret",
+                kategoria: "inne",
+                tydzien: "wszystkie"
             }
         ]
     },
