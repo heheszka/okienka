@@ -28,18 +28,28 @@
         <div id="lista-znajomych" class="lista"></div>
     </div>
 
-    <!-- EKRAN 2: Plan / Odliczanie -->
+    <!-- EKRAN 2: Plan / Odliczanie i Kalendarz -->
     <div id="ekran-drugi" class="ekran">
         <header>
             <h1>Kiedy kolejne chlanie?</h1>
         </header>
         
         <div class="karta-odliczanie">
-            <div class="odliczanie-tytul">Do Szondrzejek zostało</div>
+            <div id="odliczanie-tytul" class="odliczanie-tytul">Brak nadchodzących imprez</div>
             <div id="licznik-dni" class="odliczanie-liczba">--</div>
-            <div id="licznik-szczegoly" class="odliczanie-opis">28 listopada</div>
+            <div id="licznik-szczegoly" class="odliczanie-opis"></div>
+        </div>
+
+        <div class="kalendarz-karta">
+            <div id="kalendarz-naglowek" class="kalendarz-naglowek">Miesiąc</div>
+            <div class="kalendarz-dni-tygodnia">
+                <span>Pn</span><span>Wt</span><span>Śr</span><span>Cz</span><span>Pt</span><span>Sb</span><span>Nd</span>
+            </div>
+            <div id="kalendarz-siatka" class="kalendarz-siatka"></div>
+            <div id="kalendarz-legenda" class="kalendarz-legenda"></div>
         </div>
     </div>
+
 
 
     <!-- EKRAN 3: Pusta zakładka -->
