@@ -1,0 +1,24 @@
+name: Aktualizacja planow z uczelni
+
+on:
+  schedule:
+    - cron: "0 5 * * *" # Codziennie o 6:00 rano czasu polskiego
+  workflow_dispatch: # Pozwala uruchomić ręcznie jednym kliknięciem na GitHubie
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - run: node pobierz-plany.js
+      - run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add plany-z-uczelni.json
+          git diff --staged --quiet || (git commit -m "Aktualizacja planow z uczelni" && git push)

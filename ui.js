@@ -146,34 +146,21 @@ function zmienEkran(idEkranu, kliknietyPrzycisk) {
     window.scrollTo(0, 0);
 }
 
-async function pobierzPlanZLinku(imieOsoby, linkIcs) {
-    const kluczCache = `plan_ics_${imieOsoby}`;
-    const osoba = planyZnajomych.find(o => o.imie === imieOsoby);
-    if (!osoba) return;
-
-    const zapisane = localStorage.getItem(kluczCache);
-    if (zapisane) {
-        osoba.zajecia = JSON.parse(zapisane);
-        odswiezEkran();
-    }
-
+async function wczytajPlanyZUczelni() {
     try {
-        const res = await fetch(`/api/plan-ics?url=${encodeURIComponent(linkIcs)}`);
+        const res = await fetch("plany-z-uczelni.json");
         if (res.ok) {
-            const dane = await res.json();
-            if (dane.zajecia && dane.zajecia.length > 0) {
-                osoba.zajecia = dane.zajecia;
-                localStorage.setItem(kluczCache, JSON.stringify(dane.zajecia));
-                odswiezEkran();
-            }
+            const pobranePlany = await res.json();
+            planyZnajomych.forEach(osoba => {
+                if (pobranePlany[osoba.imie] && pobranePlany[osoba.imie].length > 0) {
+                    osoba.zajecia = pobranePlany[osoba.imie];
+                }
+            });
+            odswiezEkran();
         }
     } catch (e) {
-        console.log("Używam zapisanego planu offline dla:", imieOsoby);
+        console.log("Używam planów z plany.js");
     }
 }
 
-// Synchronizacja planu Oli z UEK
-const linkOliUek = "https://uek.krakow.pl" + "/index.php?typ=G&id=188531&okres=3&format=ics";
-pobierzPlanZLinku("Ola", linkOliUek);
-
-
+wczytajPlanyZUczelni();

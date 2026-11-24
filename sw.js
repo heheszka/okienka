@@ -1,4 +1,4 @@
-const NAZWA_CACHE = "okienka-v6";
+const NAZWA_CACHE = "okienka-v7";
 
 const plikiDoZapisu = new Array(
     "./",
@@ -11,7 +11,8 @@ const plikiDoZapisu = new Array(
     "odliczanie.js",
     "manifest.json",
     "images/ikona-192.png",
-    "images/ikona-512.png"
+    "images/ikona-512.png",
+    "plany-z-uczelni.json"
 );
 
 self.addEventListener("install", event => {
