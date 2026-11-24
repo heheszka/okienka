@@ -3,10 +3,11 @@ const otwarteKarty = new Set();
 
 const priorytetStatusu = {
     okienko: 1,
-    przed: 2,
-    zajecia: 3,
-    po: 4,
-    wolne: 5
+    przerwa: 2,
+    przed: 3,
+    zajecia: 4,
+    po: 5,
+    wolne: 6
 };
 
 const nazwyDni = ["Niedziela", "Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota"];

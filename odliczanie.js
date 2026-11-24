@@ -3,6 +3,7 @@ const wydarzenia = new Array(
     // --- NASZE IMPREZY 2026 ---
     { miesiac: 11, dzien: 19, nazwa: "Akademikowy Zlot Cweli i Cwelinek", typ: "impreza" },
     { miesiac: 11, dzien: 28, nazwa: "Szondrzejki", typ: "impreza" },
+    { miesiac: 12, dzien: 4, nazwa: "Heated Rivalry Party", typ: "impreza" },
 
     // --- ŚWIĘTA STAŁE ---
     { miesiac: 1, dzien: 1, nazwa: "Nowy Rok", typ: "swieto" },

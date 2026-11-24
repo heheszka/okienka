@@ -66,14 +66,32 @@ function sprawdzStatusOsoby(osoba, wymuszonyTydzien = null) {
         };
     }
 
-  // Przypadek D: Ma OKIENKO (były już jakieś zajęcia i są jeszcze kolejne)
+   // Przypadek D: Ma PRZERWĘ (<= 20 min) lub OKIENKO (> 20 min)
     if (nastepneZajecia) {
-        const dlugoscOkienka = naMinuty(nastepneZajecia.start) - aktualneMinuty;
+        const pozostaloMinut = naMinuty(nastepneZajecia.start) - aktualneMinuty;
         const salaTekst = nastepneZajecia.sala ? ` (${nastepneZajecia.sala})` : "";
+
+        // Szukamy zajęć, które właśnie się skończyły, żeby znać pełną długość przerwy
+        const zakonczoneZajecia = zajeciaDzis.filter(z => naMinuty(z.koniec) <= aktualneMinuty);
+        const poprzednieZajecia = zakonczoneZajecia.at(-1);
+        const calaPrzerwa = poprzednieZajecia
+            ? naMinuty(nastepneZajecia.start) - naMinuty(poprzednieZajecia.koniec)
+            : pozostaloMinut;
+
+        // Jeśli cała przerwa między zajęciami trwa 20 minut lub mniej -> Zwykła przerwa
+        if (calaPrzerwa <= 20) {
+            return {
+                status: "przerwa",
+                etykieta: `Ma przerwę (do ${nastepneZajecia.start})`,
+                szczegoly: `Jeszcze ${pozostaloMinut} min • Potem: ${nastepneZajecia.przedmiot}${salaTekst}`
+            };
+        }
+
+        // Jeśli trwa dłużej niż 20 minut -> Prawdziwe okienko
         return {
-        status: "okienko",
-        etykieta: `MA OKIENKO (do ${nastepneZajecia.start})`,
-        szczegoly: `Wolne przez ${dlugoscOkienka} min • Potem: ${nastepneZajecia.przedmiot} ${salaTekst}`
+            status: "okienko",
+            etykieta: `MA OKIENKO (do ${nastepneZajecia.start})`,
+            szczegoly: `Wolne przez ${pozostaloMinut} min • Potem: ${nastepneZajecia.przedmiot}${salaTekst}`
         };
     }
 

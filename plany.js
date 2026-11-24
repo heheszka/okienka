@@ -460,14 +460,6 @@ const planyZnajomych = [
             // Poniedziałek (1)
             {
                 dzien: 1,
-                start: "09:00",
-                koniec: "10:30",
-                przedmiot: "Komputery",
-                kategoria: "ćwiczenia",
-                tydzien: "wszystkie"
-            },
-            {
-                dzien: 1,
                 start: "12:45",
                 koniec: "14:15",
                 przedmiot: "Teoria proj. arch. - urban. - zasady proj",
@@ -484,8 +476,8 @@ const planyZnajomych = [
             },
             {
                 dzien: 1,
-                start: "16:30",
-                koniec: "18:00",
+                start: "16:15",
+                koniec: "17:45",
                 przedmiot: "Francuski",
                 kategoria: "lektorat",
                 tydzien: "wszystkie"
