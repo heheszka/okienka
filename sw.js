@@ -1,4 +1,4 @@
-const NAZWA_CACHE = "okienka-v7";
+const NAZWA_CACHE = "okienka-v8";
 
 const plikiDoZapisu = new Array(
     "./",

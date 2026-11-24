@@ -131,23 +131,29 @@ function odswiezEkran() {
         kontener.appendChild(karta);
     });
 }
+// 1. Na start: do sztywnych planów z plany.js doklejamy dodatkowe.js (zapas na wypadek awarii)
+if (typeof dodatkoweZajecia !== "undefined") {
+    planyZnajomych.forEach(osoba => {
+        if (dodatkoweZajecia[osoba.imie]) {
+            osoba.zajecia = new Array(...osoba.zajecia, ...dodatkoweZajecia[osoba.imie]);
+        }
+    });
+}
 
 odswiezEkran();
 setInterval(odswiezEkran, 30000);
 
 function zmienEkran(idEkranu, kliknietyPrzycisk) {
-    // Ukryj wszystkie ekrany i pokaż wybrany
     document.querySelectorAll('.ekran').forEach(e => e.classList.remove('aktywny'));
     document.getElementById(idEkranu).classList.add('aktywny');
 
-    // Zmień podświetlenie przycisku na dolnym pasku
     document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('aktywny'));
     kliknietyPrzycisk.classList.add('aktywny');
 
-    // Przewiń na samą górę po zmianie zakładki
     window.scrollTo(0, 0);
 }
 
+// 2. Jeśli jest pobrany plan z uczelni -> zastępuje sztywny plan z plany.js + dokleja dodatkowe.js
 async function wczytajPlanyZUczelni() {
     try {
         const res = await fetch("plany-z-uczelni.json");
@@ -155,13 +161,17 @@ async function wczytajPlanyZUczelni() {
             const pobranePlany = await res.json();
             planyZnajomych.forEach(osoba => {
                 if (pobranePlany[osoba.imie] && pobranePlany[osoba.imie].length > 0) {
-                    osoba.zajecia = pobranePlany[osoba.imie];
+                    const ekstra = (typeof dodatkoweZajecia !== "undefined" && dodatkoweZajecia[osoba.imie])
+                        ? dodatkoweZajecia[osoba.imie]
+                        : new Array();
+                    // Zastępujemy sztywny plan nowym z uczelni + dodajemy ekstra zajęcia
+                    osoba.zajecia = new Array(...pobranePlany[osoba.imie], ...ekstra);
                 }
             });
             odswiezEkran();
         }
     } catch (e) {
-        console.log("Używam planów z plany.js");
+        console.log("Używam sztywnych planów z plany.js");
     }
 }
 

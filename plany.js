@@ -87,14 +87,6 @@ const planyZnajomych = [
                 kategoria: "ćwiczenia",
                 tydzien: "wszystkie"
             },
-            {
-                dzien: 4,
-                start: "15:00",
-                koniec: "16:30",
-                przedmiot: "Fitness",
-                kategoria: "WF",
-                tydzien: "wszystkie"
-            },
             // Piątek (5)
             {
                 dzien: 5,
