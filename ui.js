@@ -16,11 +16,13 @@ const nazwyDni = ["Niedziela", "Poniedziałek", "Wtorek", "Środa", "Czwartek", 
 const koloryKategorii = {
     "ćwiczenia": "kat-cwiczenia",
     "ćwiczenia projektowe": "kat-cwiczenia",
+    "ćwiczenia na moodlu": "kat-wyklad-zdalny",
     "wykład": "kat-wyklad",
     "wykład zdalny": "kat-wyklad-zdalny",
     "laboratorium": "kat-laboratorium",
     "konwersatorium": "kat-laboratorium",
     "lektorat": "kat-lektorat",
+    "odwołane": "kat-odwolane",
     "domyslny": "kat-inne"
 };
 

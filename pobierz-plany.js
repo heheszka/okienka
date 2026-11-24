@@ -2,7 +2,7 @@ const fs = require("fs");
 
 // Tutaj dopisujesz linki .ics znajomych (klucz = dokładnie takie samo imię jak w plany.js)
 const zrodlaPlanow = {
-    "Ola": "https://uek.krakow.pl" + "/api/calendar?url=https%3A%2F%2Fplanzajec.uek.krakow.pl%2Findex.php%3Ftyp%3DG%26id%3D188531%26okres%3D3&lektoraty=1"
+    "Ola": "https://" + "a2c" + ".uek.krakow.pl/api/calendar?url=https%3A%2F%2Fplanzajec.uek.krakow.pl%2Findex.php%3Ftyp%3DG%26id%3D188531%26okres%3D3&lektoraty=1"
 };
 
 async function start() {
@@ -12,14 +12,21 @@ async function start() {
         try {
             console.log(`Pobieram plan dla: ${imie}...`);
             const res = await fetch(link, {
-                headers: { "User-Agent": "Mozilla/5.0" }
+                headers: {
+                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+                    "Accept": "text/calendar, text/plain, */*"
+                }
             });
+            console.log(`Status odpowiedzi dla ${imie}: ${res.status}`);
+
             if (res.ok) {
                 const tekst = await res.text();
                 const zajecia = parsujIcsUek(tekst);
                 if (zajecia.length > 0) {
                     wynikKoncowy[imie] = zajecia;
                     console.log(`Sukces! Pobrano ${zajecia.length} zajęć dla: ${imie}`);
+                } else {
+                    console.log("Pobrano odpowiedź, ale nie znaleziono zajęć. Początek odpowiedzi:", tekst.slice(0, 150));
                 }
             }
         } catch (err) {
@@ -40,8 +47,7 @@ function parsujIcsUek(tekst) {
         if (linia === "BEGIN:VEVENT") {
             aktualne = {};
         } else if (linia === "END:VEVENT" && aktualne) {
-            const czyPrzeniesione = aktualne.przedmiot && aktualne.przedmiot.toLowerCase().includes("(przen");
-            if (!czyPrzeniesione && aktualne.data && aktualne.start && aktualne.koniec) {
+            if (aktualne.data && aktualne.start && aktualne.koniec) {
                 wynik.push(aktualne);
             }
             aktualne = null;
@@ -58,9 +64,14 @@ function parsujIcsUek(tekst) {
                 aktualne.przedmiot = surowaNazwa.replace(/\s*\([^)]*\d+\/\d+\)\s*$/, "").trim();
             } else if (linia.startsWith("LOCATION")) {
                 let sala = linia.split(":").slice(1).join(":").replace(/\\,/g, ",").trim();
-                if (sala.startsWith("http")) {
+                if (sala.toLowerCase().includes("moodle")) {
+                    sala = "Moodle";
+                    aktualne.kategoria = "ćwiczenia na moodlu";
+                } else if (sala.startsWith("http")) {
                     sala = "Online";
-                    if (aktualne.kategoria === "wykład") aktualne.kategoria = "wykład zdalny";
+                    if (aktualne.kategoria === "wykład") {
+                        aktualne.kategoria = "wykład zdalny";
+                    }
                 }
                 aktualne.sala = sala;
             }
@@ -94,6 +105,7 @@ function wyciagnijDateICzas(linia) {
 
 function wykryjKategorieUek(nazwa) {
     const n = nazwa.toLowerCase();
+    if (n.includes("(przen")) return "odwołane";
     if (n.includes("-el")) return "wykład zdalny";
     if (n.includes("(wyk")) return "wykład";
     if (n.includes("(ćw")) return "ćwiczenia";

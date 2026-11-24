@@ -3,8 +3,8 @@ const NAZWA_CACHE = "okienka-v7";
 const plikiDoZapisu = new Array(
     "./",
     "index.html",
-    "style1.css",
-    "style2.css",
+    "styles/style1.css",
+    "styles/style2.css",
     "plany.js",
     "app.js",
     "ui.js",
@@ -12,7 +12,8 @@ const plikiDoZapisu = new Array(
     "manifest.json",
     "images/ikona-192.png",
     "images/ikona-512.png",
-    "plany-z-uczelni.json"
+    "plany-z-uczelni.json",
+    "dodatkowe.js"
 );
 
 self.addEventListener("install", event => {

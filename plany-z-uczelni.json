@@ -1,0 +1,1471 @@
+{
+  "Ola": [
+    {
+      "data": "2026-10-01",
+      "dzien": 4,
+      "start": "09:45",
+      "koniec": "11:15",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Matematyka",
+      "sala": "Paw.F 515"
+    },
+    {
+      "data": "2026-10-02",
+      "dzien": 5,
+      "start": "08:00",
+      "koniec": "09:30",
+      "kategoria": "wykład",
+      "przedmiot": "Podstawy prawa",
+      "sala": ""
+    },
+    {
+      "data": "2026-10-02",
+      "dzien": 5,
+      "start": "09:45",
+      "koniec": "11:15",
+      "kategoria": "wykład",
+      "przedmiot": "Finanse",
+      "sala": ""
+    },
+    {
+      "data": "2026-10-02",
+      "dzien": 5,
+      "start": "13:15",
+      "koniec": "14:45",
+      "kategoria": "wykład",
+      "przedmiot": "Matematyka",
+      "sala": ""
+    },
+    {
+      "data": "2026-10-05",
+      "dzien": 1,
+      "start": "16:45",
+      "koniec": "18:15",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Matematyka",
+      "sala": "Paw.F 106"
+    },
+    {
+      "data": "2026-10-05",
+      "dzien": 1,
+      "start": "18:30",
+      "koniec": "20:00",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Podstawy prawa",
+      "sala": "Bibl. 440"
+    },
+    {
+      "data": "2026-10-07",
+      "dzien": 3,
+      "start": "08:00",
+      "koniec": "09:30",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Podstawy ekonomii środowiska",
+      "sala": "Paw.A 117 lab..komputerowe"
+    },
+    {
+      "data": "2026-10-07",
+      "dzien": 3,
+      "start": "09:45",
+      "koniec": "11:15",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Rachunkowość",
+      "sala": "Paw.F 616"
+    },
+    {
+      "data": "2026-10-07",
+      "dzien": 3,
+      "start": "11:30",
+      "koniec": "13:00",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Finanse",
+      "sala": "Paw.F 307"
+    },
+    {
+      "data": "2026-10-08",
+      "dzien": 4,
+      "start": "09:45",
+      "koniec": "11:15",
+      "kategoria": "odwołane",
+      "przedmiot": "Matematyka",
+      "sala": ""
+    },
+    {
+      "data": "2026-10-08",
+      "dzien": 4,
+      "start": "11:30",
+      "koniec": "13:00",
+      "kategoria": "odwołane",
+      "przedmiot": "Mikroekonomia",
+      "sala": ""
+    },
+    {
+      "data": "2026-10-08",
+      "dzien": 4,
+      "start": "16:45",
+      "koniec": "18:15",
+      "kategoria": "wykład",
+      "przedmiot": "Prawa i obowiązki studenta",
+      "sala": "Paw.S sala 9"
+    },
+    {
+      "data": "2026-10-08",
+      "dzien": 4,
+      "start": "18:30",
+      "koniec": "20:00",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Mikroekonomia",
+      "sala": "Paw.F CJ 309"
+    },
+    {
+      "data": "2026-10-09",
+      "dzien": 5,
+      "start": "08:00",
+      "koniec": "09:30",
+      "kategoria": "wykład",
+      "przedmiot": "Podstawy prawa",
+      "sala": ""
+    },
+    {
+      "data": "2026-10-09",
+      "dzien": 5,
+      "start": "09:45",
+      "koniec": "11:15",
+      "kategoria": "wykład",
+      "przedmiot": "Finanse",
+      "sala": ""
+    },
+    {
+      "data": "2026-10-09",
+      "dzien": 5,
+      "start": "13:15",
+      "koniec": "14:45",
+      "kategoria": "wykład",
+      "przedmiot": "Matematyka",
+      "sala": ""
+    },
+    {
+      "data": "2026-10-12",
+      "dzien": 1,
+      "start": "19:15",
+      "koniec": "21:00",
+      "kategoria": "wykład",
+      "przedmiot": "Rachunkowość",
+      "sala": ""
+    },
+    {
+      "data": "2026-10-13",
+      "dzien": 2,
+      "start": "15:00",
+      "koniec": "16:30",
+      "kategoria": "wykład",
+      "przedmiot": "Matematyka",
+      "sala": ""
+    },
+    {
+      "data": "2026-10-13",
+      "dzien": 2,
+      "start": "16:45",
+      "koniec": "18:15",
+      "kategoria": "wykład",
+      "przedmiot": "Rachunkowość",
+      "sala": ""
+    },
+    {
+      "data": "2026-10-13",
+      "dzien": 2,
+      "start": "18:30",
+      "koniec": "20:00",
+      "kategoria": "wykład",
+      "przedmiot": "Mikroekonomia",
+      "sala": ""
+    },
+    {
+      "data": "2026-10-14",
+      "dzien": 3,
+      "start": "09:45",
+      "koniec": "11:15",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Rachunkowość",
+      "sala": "Paw.F 616"
+    },
+    {
+      "data": "2026-10-14",
+      "dzien": 3,
+      "start": "11:30",
+      "koniec": "13:00",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Finanse",
+      "sala": "Paw.F 307"
+    },
+    {
+      "data": "2026-10-15",
+      "dzien": 4,
+      "start": "09:45",
+      "koniec": "11:15",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Matematyka",
+      "sala": "Paw.F 515"
+    },
+    {
+      "data": "2026-10-15",
+      "dzien": 4,
+      "start": "11:30",
+      "koniec": "13:00",
+      "kategoria": "odwołane",
+      "przedmiot": "Mikroekonomia",
+      "sala": ""
+    },
+    {
+      "data": "2026-10-15",
+      "dzien": 4,
+      "start": "18:30",
+      "koniec": "20:00",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Mikroekonomia",
+      "sala": "Paw.F 102"
+    },
+    {
+      "data": "2026-10-16",
+      "dzien": 5,
+      "start": "08:00",
+      "koniec": "09:30",
+      "kategoria": "wykład",
+      "przedmiot": "Podstawy prawa",
+      "sala": ""
+    },
+    {
+      "data": "2026-10-16",
+      "dzien": 5,
+      "start": "09:45",
+      "koniec": "11:15",
+      "kategoria": "odwołane",
+      "przedmiot": "Finanse",
+      "sala": ""
+    },
+    {
+      "data": "2026-10-19",
+      "dzien": 1,
+      "start": "18:30",
+      "koniec": "20:00",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Podstawy prawa",
+      "sala": "Bibl. 440"
+    },
+    {
+      "data": "2026-10-20",
+      "dzien": 2,
+      "start": "15:00",
+      "koniec": "16:30",
+      "kategoria": "wykład",
+      "przedmiot": "Matematyka",
+      "sala": ""
+    },
+    {
+      "data": "2026-10-20",
+      "dzien": 2,
+      "start": "16:45",
+      "koniec": "18:15",
+      "kategoria": "odwołane",
+      "przedmiot": "Rachunkowość",
+      "sala": ""
+    },
+    {
+      "data": "2026-10-20",
+      "dzien": 2,
+      "start": "18:30",
+      "koniec": "20:00",
+      "kategoria": "wykład",
+      "przedmiot": "Mikroekonomia",
+      "sala": ""
+    },
+    {
+      "data": "2026-10-21",
+      "dzien": 3,
+      "start": "08:00",
+      "koniec": "09:30",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Podstawy ekonomii środowiska",
+      "sala": "Paw.A 117 lab..komputerowe"
+    },
+    {
+      "data": "2026-10-21",
+      "dzien": 3,
+      "start": "09:45",
+      "koniec": "11:15",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Rachunkowość",
+      "sala": "Paw.F 616"
+    },
+    {
+      "data": "2026-10-21",
+      "dzien": 3,
+      "start": "11:30",
+      "koniec": "13:00",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Finanse",
+      "sala": "Paw.F 307"
+    },
+    {
+      "data": "2026-10-22",
+      "dzien": 4,
+      "start": "09:45",
+      "koniec": "11:15",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Matematyka",
+      "sala": "Paw.F 515"
+    },
+    {
+      "data": "2026-10-22",
+      "dzien": 4,
+      "start": "11:30",
+      "koniec": "13:00",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Mikroekonomia",
+      "sala": "Paw.C sala C"
+    },
+    {
+      "data": "2026-10-23",
+      "dzien": 5,
+      "start": "08:00",
+      "koniec": "09:30",
+      "kategoria": "wykład",
+      "przedmiot": "Podstawy prawa",
+      "sala": ""
+    },
+    {
+      "data": "2026-10-23",
+      "dzien": 5,
+      "start": "09:45",
+      "koniec": "11:15",
+      "kategoria": "wykład",
+      "przedmiot": "Finanse",
+      "sala": ""
+    },
+    {
+      "data": "2026-10-23",
+      "dzien": 5,
+      "start": "11:30",
+      "koniec": "13:00",
+      "kategoria": "wykład",
+      "przedmiot": "Podstawy ekonomii środowiska",
+      "sala": ""
+    },
+    {
+      "data": "2026-10-27",
+      "dzien": 2,
+      "start": "15:00",
+      "koniec": "16:30",
+      "kategoria": "wykład zdalny",
+      "przedmiot": "Matematyka",
+      "sala": "Online"
+    },
+    {
+      "data": "2026-10-27",
+      "dzien": 2,
+      "start": "16:45",
+      "koniec": "18:15",
+      "kategoria": "odwołane",
+      "przedmiot": "Rachunkowość",
+      "sala": ""
+    },
+    {
+      "data": "2026-10-27",
+      "dzien": 2,
+      "start": "18:30",
+      "koniec": "20:00",
+      "kategoria": "wykład zdalny",
+      "przedmiot": "Mikroekonomia",
+      "sala": "Online"
+    },
+    {
+      "data": "2026-10-28",
+      "dzien": 3,
+      "start": "09:45",
+      "koniec": "11:15",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Rachunkowość",
+      "sala": "Paw.F 616"
+    },
+    {
+      "data": "2026-10-28",
+      "dzien": 3,
+      "start": "11:30",
+      "koniec": "13:00",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Finanse",
+      "sala": "Paw.F 307"
+    },
+    {
+      "data": "2026-10-29",
+      "dzien": 4,
+      "start": "09:45",
+      "koniec": "11:15",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Matematyka",
+      "sala": "Paw.F 515"
+    },
+    {
+      "data": "2026-10-29",
+      "dzien": 4,
+      "start": "11:30",
+      "koniec": "13:00",
+      "kategoria": "ćwiczenia na moodlu",
+      "przedmiot": "Mikroekonomia",
+      "sala": "Moodle"
+    },
+    {
+      "data": "2026-10-29",
+      "dzien": 4,
+      "start": "18:30",
+      "koniec": "20:00",
+      "kategoria": "wykład zdalny",
+      "przedmiot": "Rachunkowość",
+      "sala": "Online"
+    },
+    {
+      "data": "2026-10-30",
+      "dzien": 5,
+      "start": "08:00",
+      "koniec": "09:30",
+      "kategoria": "wykład zdalny",
+      "przedmiot": "Podstawy prawa",
+      "sala": "Online"
+    },
+    {
+      "data": "2026-10-30",
+      "dzien": 5,
+      "start": "09:45",
+      "koniec": "11:15",
+      "kategoria": "wykład zdalny",
+      "przedmiot": "Finanse",
+      "sala": "Online"
+    },
+    {
+      "data": "2026-10-30",
+      "dzien": 5,
+      "start": "11:30",
+      "koniec": "13:00",
+      "kategoria": "wykład zdalny",
+      "przedmiot": "Podstawy ekonomii środowiska",
+      "sala": "Online"
+    },
+    {
+      "data": "2026-10-30",
+      "dzien": 5,
+      "start": "13:15",
+      "koniec": "14:45",
+      "kategoria": "wykład zdalny",
+      "przedmiot": "Finanse",
+      "sala": "Online"
+    },
+    {
+      "data": "2026-11-02",
+      "dzien": 1,
+      "start": "18:30",
+      "koniec": "20:00",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Podstawy prawa",
+      "sala": "Bibl. 440"
+    },
+    {
+      "data": "2026-11-03",
+      "dzien": 2,
+      "start": "15:00",
+      "koniec": "16:30",
+      "kategoria": "wykład zdalny",
+      "przedmiot": "Matematyka",
+      "sala": "Online"
+    },
+    {
+      "data": "2026-11-03",
+      "dzien": 2,
+      "start": "16:45",
+      "koniec": "18:15",
+      "kategoria": "wykład zdalny",
+      "przedmiot": "Rachunkowość",
+      "sala": "Online"
+    },
+    {
+      "data": "2026-11-03",
+      "dzien": 2,
+      "start": "18:30",
+      "koniec": "20:00",
+      "kategoria": "wykład zdalny",
+      "przedmiot": "Mikroekonomia",
+      "sala": "Online"
+    },
+    {
+      "data": "2026-11-04",
+      "dzien": 3,
+      "start": "08:00",
+      "koniec": "09:30",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Podstawy ekonomii środowiska",
+      "sala": "Paw.A 117 lab..komputerowe"
+    },
+    {
+      "data": "2026-11-04",
+      "dzien": 3,
+      "start": "09:45",
+      "koniec": "11:15",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Rachunkowość",
+      "sala": "Paw.F 616"
+    },
+    {
+      "data": "2026-11-04",
+      "dzien": 3,
+      "start": "11:30",
+      "koniec": "13:00",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Finanse",
+      "sala": "Paw.F 307"
+    },
+    {
+      "data": "2026-11-05",
+      "dzien": 4,
+      "start": "09:45",
+      "koniec": "11:15",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Matematyka",
+      "sala": "Paw.F 515"
+    },
+    {
+      "data": "2026-11-05",
+      "dzien": 4,
+      "start": "11:30",
+      "koniec": "13:00",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Mikroekonomia",
+      "sala": "Paw.C sala C"
+    },
+    {
+      "data": "2026-11-05",
+      "dzien": 4,
+      "start": "13:15",
+      "koniec": "14:45",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Rachunkowość",
+      "sala": "Paw.F 713  Kat.Bank./sala dyd."
+    },
+    {
+      "data": "2026-11-06",
+      "dzien": 5,
+      "start": "08:00",
+      "koniec": "09:30",
+      "kategoria": "wykład zdalny",
+      "przedmiot": "Podstawy prawa",
+      "sala": "Online"
+    },
+    {
+      "data": "2026-11-06",
+      "dzien": 5,
+      "start": "09:45",
+      "koniec": "11:15",
+      "kategoria": "wykład zdalny",
+      "przedmiot": "Finanse",
+      "sala": "Online"
+    },
+    {
+      "data": "2026-11-06",
+      "dzien": 5,
+      "start": "11:30",
+      "koniec": "13:00",
+      "kategoria": "wykład zdalny",
+      "przedmiot": "Podstawy ekonomii środowiska",
+      "sala": "Online"
+    },
+    {
+      "data": "2026-11-10",
+      "dzien": 2,
+      "start": "15:00",
+      "koniec": "16:30",
+      "kategoria": "wykład zdalny",
+      "przedmiot": "Matematyka",
+      "sala": "Online"
+    },
+    {
+      "data": "2026-11-10",
+      "dzien": 2,
+      "start": "16:45",
+      "koniec": "18:15",
+      "kategoria": "wykład zdalny",
+      "przedmiot": "Rachunkowość",
+      "sala": "Online"
+    },
+    {
+      "data": "2026-11-10",
+      "dzien": 2,
+      "start": "18:30",
+      "koniec": "20:00",
+      "kategoria": "wykład zdalny",
+      "przedmiot": "Mikroekonomia",
+      "sala": "Online"
+    },
+    {
+      "data": "2026-11-12",
+      "dzien": 4,
+      "start": "09:45",
+      "koniec": "11:15",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Matematyka",
+      "sala": "Paw.F 515"
+    },
+    {
+      "data": "2026-11-12",
+      "dzien": 4,
+      "start": "11:30",
+      "koniec": "13:00",
+      "kategoria": "ćwiczenia na moodlu",
+      "przedmiot": "Mikroekonomia",
+      "sala": "Moodle"
+    },
+    {
+      "data": "2026-11-13",
+      "dzien": 5,
+      "start": "08:00",
+      "koniec": "09:30",
+      "kategoria": "wykład zdalny",
+      "przedmiot": "Podstawy prawa",
+      "sala": "Online"
+    },
+    {
+      "data": "2026-11-13",
+      "dzien": 5,
+      "start": "09:45",
+      "koniec": "11:15",
+      "kategoria": "wykład zdalny",
+      "przedmiot": "Finanse",
+      "sala": "Online"
+    },
+    {
+      "data": "2026-11-13",
+      "dzien": 5,
+      "start": "11:30",
+      "koniec": "13:00",
+      "kategoria": "wykład zdalny",
+      "przedmiot": "Podstawy ekonomii środowiska",
+      "sala": "Online"
+    },
+    {
+      "data": "2026-11-16",
+      "dzien": 1,
+      "start": "18:30",
+      "koniec": "20:00",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Podstawy prawa",
+      "sala": "Bibl. 440"
+    },
+    {
+      "data": "2026-11-17",
+      "dzien": 2,
+      "start": "15:00",
+      "koniec": "16:30",
+      "kategoria": "wykład zdalny",
+      "przedmiot": "Matematyka",
+      "sala": "Online"
+    },
+    {
+      "data": "2026-11-17",
+      "dzien": 2,
+      "start": "16:45",
+      "koniec": "18:15",
+      "kategoria": "wykład zdalny",
+      "przedmiot": "Rachunkowość",
+      "sala": "Online"
+    },
+    {
+      "data": "2026-11-17",
+      "dzien": 2,
+      "start": "18:30",
+      "koniec": "20:00",
+      "kategoria": "wykład zdalny",
+      "przedmiot": "Mikroekonomia",
+      "sala": "Online"
+    },
+    {
+      "data": "2026-11-18",
+      "dzien": 3,
+      "start": "08:00",
+      "koniec": "09:30",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Podstawy ekonomii środowiska",
+      "sala": "Paw.A 117 lab..komputerowe"
+    },
+    {
+      "data": "2026-11-18",
+      "dzien": 3,
+      "start": "09:45",
+      "koniec": "11:15",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Rachunkowość",
+      "sala": "Paw.F 616"
+    },
+    {
+      "data": "2026-11-18",
+      "dzien": 3,
+      "start": "11:30",
+      "koniec": "13:00",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Finanse",
+      "sala": "Paw.F 307"
+    },
+    {
+      "data": "2026-11-19",
+      "dzien": 4,
+      "start": "09:45",
+      "koniec": "11:15",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Matematyka",
+      "sala": "Paw.F 515"
+    },
+    {
+      "data": "2026-11-19",
+      "dzien": 4,
+      "start": "11:30",
+      "koniec": "13:00",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Mikroekonomia",
+      "sala": "Paw.C sala C"
+    },
+    {
+      "data": "2026-11-19",
+      "dzien": 4,
+      "start": "13:15",
+      "koniec": "14:45",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Rachunkowość",
+      "sala": "Rakowicka 16 sala -103"
+    },
+    {
+      "data": "2026-11-20",
+      "dzien": 5,
+      "start": "08:00",
+      "koniec": "09:30",
+      "kategoria": "wykład zdalny",
+      "przedmiot": "Podstawy prawa",
+      "sala": "Online"
+    },
+    {
+      "data": "2026-11-20",
+      "dzien": 5,
+      "start": "09:45",
+      "koniec": "11:15",
+      "kategoria": "wykład zdalny",
+      "przedmiot": "Finanse",
+      "sala": "Online"
+    },
+    {
+      "data": "2026-11-20",
+      "dzien": 5,
+      "start": "11:30",
+      "koniec": "13:00",
+      "kategoria": "wykład zdalny",
+      "przedmiot": "Podstawy ekonomii środowiska",
+      "sala": "Online"
+    },
+    {
+      "data": "2026-11-24",
+      "dzien": 2,
+      "start": "15:00",
+      "koniec": "16:30",
+      "kategoria": "wykład zdalny",
+      "przedmiot": "Matematyka",
+      "sala": "Online"
+    },
+    {
+      "data": "2026-11-24",
+      "dzien": 2,
+      "start": "16:45",
+      "koniec": "18:15",
+      "kategoria": "wykład zdalny",
+      "przedmiot": "Rachunkowość",
+      "sala": "Online"
+    },
+    {
+      "data": "2026-11-24",
+      "dzien": 2,
+      "start": "18:30",
+      "koniec": "20:00",
+      "kategoria": "ćwiczenia na moodlu",
+      "przedmiot": "Mikroekonomia",
+      "sala": "Moodle"
+    },
+    {
+      "data": "2026-11-25",
+      "dzien": 3,
+      "start": "09:45",
+      "koniec": "11:15",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Rachunkowość",
+      "sala": "Paw.F 616"
+    },
+    {
+      "data": "2026-11-25",
+      "dzien": 3,
+      "start": "11:30",
+      "koniec": "13:00",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Finanse",
+      "sala": "Paw.F 307"
+    },
+    {
+      "data": "2026-11-26",
+      "dzien": 4,
+      "start": "09:45",
+      "koniec": "11:15",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Matematyka",
+      "sala": "Paw.F 515"
+    },
+    {
+      "data": "2026-11-26",
+      "dzien": 4,
+      "start": "11:30",
+      "koniec": "13:00",
+      "kategoria": "ćwiczenia na moodlu",
+      "przedmiot": "Mikroekonomia",
+      "sala": "Moodle"
+    },
+    {
+      "data": "2026-11-26",
+      "dzien": 4,
+      "start": "13:15",
+      "koniec": "14:45",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Finanse",
+      "sala": "Paw.F 307"
+    },
+    {
+      "data": "2026-11-27",
+      "dzien": 5,
+      "start": "08:00",
+      "koniec": "09:30",
+      "kategoria": "wykład zdalny",
+      "przedmiot": "Podstawy prawa",
+      "sala": "Online"
+    },
+    {
+      "data": "2026-11-27",
+      "dzien": 5,
+      "start": "09:45",
+      "koniec": "11:15",
+      "kategoria": "wykład zdalny",
+      "przedmiot": "Finanse",
+      "sala": "Online"
+    },
+    {
+      "data": "2026-11-27",
+      "dzien": 5,
+      "start": "11:30",
+      "koniec": "13:00",
+      "kategoria": "odwołane",
+      "przedmiot": "Podstawy ekonomii środowiska",
+      "sala": ""
+    },
+    {
+      "data": "2026-11-30",
+      "dzien": 1,
+      "start": "16:45",
+      "koniec": "18:15",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Mikroekonomia",
+      "sala": "Paw.S sala 7"
+    },
+    {
+      "data": "2026-11-30",
+      "dzien": 1,
+      "start": "18:30",
+      "koniec": "20:00",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Podstawy prawa",
+      "sala": "Bibl. 440"
+    },
+    {
+      "data": "2026-12-01",
+      "dzien": 2,
+      "start": "15:00",
+      "koniec": "16:30",
+      "kategoria": "wykład zdalny",
+      "przedmiot": "Matematyka",
+      "sala": "Online"
+    },
+    {
+      "data": "2026-12-01",
+      "dzien": 2,
+      "start": "16:45",
+      "koniec": "18:15",
+      "kategoria": "wykład zdalny",
+      "przedmiot": "Rachunkowość",
+      "sala": "Online"
+    },
+    {
+      "data": "2026-12-01",
+      "dzien": 2,
+      "start": "18:30",
+      "koniec": "19:15",
+      "kategoria": "ćwiczenia na moodlu",
+      "przedmiot": "Mikroekonomia",
+      "sala": "Moodle"
+    },
+    {
+      "data": "2026-12-02",
+      "dzien": 3,
+      "start": "08:00",
+      "koniec": "09:30",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Podstawy ekonomii środowiska",
+      "sala": "Paw.A 117 lab..komputerowe"
+    },
+    {
+      "data": "2026-12-02",
+      "dzien": 3,
+      "start": "09:45",
+      "koniec": "11:15",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Rachunkowość",
+      "sala": "Paw.F 616"
+    },
+    {
+      "data": "2026-12-02",
+      "dzien": 3,
+      "start": "11:30",
+      "koniec": "13:00",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Finanse",
+      "sala": "Paw.F 307"
+    },
+    {
+      "data": "2026-12-03",
+      "dzien": 4,
+      "start": "09:45",
+      "koniec": "11:15",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Matematyka",
+      "sala": "Paw.F 515"
+    },
+    {
+      "data": "2026-12-03",
+      "dzien": 4,
+      "start": "11:30",
+      "koniec": "13:00",
+      "kategoria": "ćwiczenia na moodlu",
+      "przedmiot": "Mikroekonomia",
+      "sala": "Moodle"
+    },
+    {
+      "data": "2026-12-03",
+      "dzien": 4,
+      "start": "13:15",
+      "koniec": "14:45",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Rachunkowość",
+      "sala": "Rakowicka 16 sala -103"
+    },
+    {
+      "data": "2026-12-04",
+      "dzien": 5,
+      "start": "08:00",
+      "koniec": "09:30",
+      "kategoria": "wykład zdalny",
+      "przedmiot": "Podstawy prawa",
+      "sala": "Online"
+    },
+    {
+      "data": "2026-12-04",
+      "dzien": 5,
+      "start": "09:45",
+      "koniec": "11:15",
+      "kategoria": "wykład zdalny",
+      "przedmiot": "Finanse",
+      "sala": "Online"
+    },
+    {
+      "data": "2026-12-04",
+      "dzien": 5,
+      "start": "11:30",
+      "koniec": "13:00",
+      "kategoria": "wykład zdalny",
+      "przedmiot": "Podstawy ekonomii środowiska",
+      "sala": "Online"
+    },
+    {
+      "data": "2026-12-08",
+      "dzien": 2,
+      "start": "15:00",
+      "koniec": "16:30",
+      "kategoria": "wykład zdalny",
+      "przedmiot": "Matematyka",
+      "sala": "Online"
+    },
+    {
+      "data": "2026-12-08",
+      "dzien": 2,
+      "start": "16:45",
+      "koniec": "18:15",
+      "kategoria": "wykład zdalny",
+      "przedmiot": "Rachunkowość",
+      "sala": "Online"
+    },
+    {
+      "data": "2026-12-08",
+      "dzien": 2,
+      "start": "18:30",
+      "koniec": "20:00",
+      "kategoria": "wykład zdalny",
+      "przedmiot": "Rachunkowość",
+      "sala": "Online"
+    },
+    {
+      "data": "2026-12-09",
+      "dzien": 3,
+      "start": "09:45",
+      "koniec": "11:15",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Rachunkowość",
+      "sala": "Paw.F 616"
+    },
+    {
+      "data": "2026-12-09",
+      "dzien": 3,
+      "start": "11:30",
+      "koniec": "13:00",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Finanse",
+      "sala": "Paw.F 307"
+    },
+    {
+      "data": "2026-12-10",
+      "dzien": 4,
+      "start": "09:45",
+      "koniec": "11:15",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Matematyka",
+      "sala": "Paw.F 515"
+    },
+    {
+      "data": "2026-12-10",
+      "dzien": 4,
+      "start": "11:30",
+      "koniec": "13:00",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Mikroekonomia",
+      "sala": "Paw.C sala C"
+    },
+    {
+      "data": "2026-12-10",
+      "dzien": 4,
+      "start": "13:15",
+      "koniec": "14:45",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Finanse",
+      "sala": "Paw.F 307"
+    },
+    {
+      "data": "2026-12-11",
+      "dzien": 5,
+      "start": "08:00",
+      "koniec": "09:30",
+      "kategoria": "wykład zdalny",
+      "przedmiot": "Podstawy prawa",
+      "sala": "Online"
+    },
+    {
+      "data": "2026-12-11",
+      "dzien": 5,
+      "start": "09:45",
+      "koniec": "11:15",
+      "kategoria": "wykład zdalny",
+      "przedmiot": "Finanse",
+      "sala": "Online"
+    },
+    {
+      "data": "2026-12-11",
+      "dzien": 5,
+      "start": "11:30",
+      "koniec": "12:15",
+      "kategoria": "wykład zdalny",
+      "przedmiot": "Podstawy ekonomii środowiska",
+      "sala": "Online"
+    },
+    {
+      "data": "2026-12-11",
+      "dzien": 5,
+      "start": "12:15",
+      "koniec": "14:00",
+      "kategoria": "wykład zdalny",
+      "przedmiot": "Podstawy ekonomii środowiska",
+      "sala": "Online"
+    },
+    {
+      "data": "2026-12-14",
+      "dzien": 1,
+      "start": "18:30",
+      "koniec": "20:00",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Podstawy prawa",
+      "sala": "Bibl. 440"
+    },
+    {
+      "data": "2026-12-15",
+      "dzien": 2,
+      "start": "15:00",
+      "koniec": "16:30",
+      "kategoria": "wykład zdalny",
+      "przedmiot": "Matematyka",
+      "sala": "Online"
+    },
+    {
+      "data": "2026-12-15",
+      "dzien": 2,
+      "start": "16:45",
+      "koniec": "18:15",
+      "kategoria": "wykład zdalny",
+      "przedmiot": "Rachunkowość",
+      "sala": "Online"
+    },
+    {
+      "data": "2026-12-16",
+      "dzien": 3,
+      "start": "08:00",
+      "koniec": "09:30",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Podstawy ekonomii środowiska",
+      "sala": "Paw.A 117 lab..komputerowe"
+    },
+    {
+      "data": "2026-12-16",
+      "dzien": 3,
+      "start": "09:45",
+      "koniec": "11:15",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Rachunkowość",
+      "sala": "Paw.F 616"
+    },
+    {
+      "data": "2026-12-16",
+      "dzien": 3,
+      "start": "11:30",
+      "koniec": "13:00",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Finanse",
+      "sala": "Paw.F 307"
+    },
+    {
+      "data": "2026-12-17",
+      "dzien": 4,
+      "start": "09:45",
+      "koniec": "11:15",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Matematyka",
+      "sala": "Paw.F 515"
+    },
+    {
+      "data": "2026-12-17",
+      "dzien": 4,
+      "start": "11:30",
+      "koniec": "13:00",
+      "kategoria": "ćwiczenia na moodlu",
+      "przedmiot": "Mikroekonomia",
+      "sala": "Moodle"
+    },
+    {
+      "data": "2026-12-17",
+      "dzien": 4,
+      "start": "13:15",
+      "koniec": "14:45",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Finanse",
+      "sala": "Rakowicka 16 sala -103"
+    },
+    {
+      "data": "2026-12-18",
+      "dzien": 5,
+      "start": "08:00",
+      "koniec": "09:30",
+      "kategoria": "wykład zdalny",
+      "przedmiot": "Podstawy prawa",
+      "sala": "Online"
+    },
+    {
+      "data": "2026-12-18",
+      "dzien": 5,
+      "start": "09:45",
+      "koniec": "11:15",
+      "kategoria": "wykład zdalny",
+      "przedmiot": "Finanse",
+      "sala": "Online"
+    },
+    {
+      "data": "2026-12-22",
+      "dzien": 2,
+      "start": "15:00",
+      "koniec": "16:30",
+      "kategoria": "wykład zdalny",
+      "przedmiot": "Matematyka",
+      "sala": "Online"
+    },
+    {
+      "data": "2026-12-22",
+      "dzien": 2,
+      "start": "16:45",
+      "koniec": "18:15",
+      "kategoria": "wykład zdalny",
+      "przedmiot": "Rachunkowość",
+      "sala": "Online"
+    },
+    {
+      "data": "2026-12-22",
+      "dzien": 2,
+      "start": "18:30",
+      "koniec": "20:00",
+      "kategoria": "wykład zdalny",
+      "przedmiot": "Rachunkowość",
+      "sala": "Online"
+    },
+    {
+      "data": "2027-01-07",
+      "dzien": 4,
+      "start": "09:45",
+      "koniec": "11:15",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Matematyka",
+      "sala": "Paw.F 515"
+    },
+    {
+      "data": "2027-01-07",
+      "dzien": 4,
+      "start": "11:30",
+      "koniec": "13:00",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Mikroekonomia",
+      "sala": "Paw.C sala C"
+    },
+    {
+      "data": "2027-01-08",
+      "dzien": 5,
+      "start": "08:00",
+      "koniec": "09:30",
+      "kategoria": "wykład zdalny",
+      "przedmiot": "Podstawy prawa",
+      "sala": "Online"
+    },
+    {
+      "data": "2027-01-08",
+      "dzien": 5,
+      "start": "09:45",
+      "koniec": "11:15",
+      "kategoria": "wykład zdalny",
+      "przedmiot": "Finanse",
+      "sala": "Online"
+    },
+    {
+      "data": "2027-01-11",
+      "dzien": 1,
+      "start": "18:30",
+      "koniec": "20:00",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Podstawy prawa",
+      "sala": "Bibl. 440"
+    },
+    {
+      "data": "2027-01-11",
+      "dzien": 1,
+      "start": "20:15",
+      "koniec": "21:00",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Podstawy prawa",
+      "sala": "Bibl. 440"
+    },
+    {
+      "data": "2027-01-12",
+      "dzien": 2,
+      "start": "15:00",
+      "koniec": "16:30",
+      "kategoria": "wykład zdalny",
+      "przedmiot": "Matematyka",
+      "sala": "Online"
+    },
+    {
+      "data": "2027-01-12",
+      "dzien": 2,
+      "start": "16:45",
+      "koniec": "18:15",
+      "kategoria": "wykład zdalny",
+      "przedmiot": "Rachunkowość",
+      "sala": "Online"
+    },
+    {
+      "data": "2027-01-13",
+      "dzien": 3,
+      "start": "08:00",
+      "koniec": "09:30",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Podstawy ekonomii środowiska",
+      "sala": "Paw.A 117 lab..komputerowe"
+    },
+    {
+      "data": "2027-01-13",
+      "dzien": 3,
+      "start": "09:45",
+      "koniec": "11:15",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Rachunkowość",
+      "sala": "Paw.F 616"
+    },
+    {
+      "data": "2027-01-13",
+      "dzien": 3,
+      "start": "11:30",
+      "koniec": "13:00",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Finanse",
+      "sala": "Paw.F 307"
+    },
+    {
+      "data": "2027-01-14",
+      "dzien": 4,
+      "start": "09:45",
+      "koniec": "11:15",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Matematyka",
+      "sala": "Paw.F 515"
+    },
+    {
+      "data": "2027-01-14",
+      "dzien": 4,
+      "start": "11:30",
+      "koniec": "13:00",
+      "kategoria": "ćwiczenia na moodlu",
+      "przedmiot": "Mikroekonomia",
+      "sala": "Moodle"
+    },
+    {
+      "data": "2027-01-15",
+      "dzien": 5,
+      "start": "08:00",
+      "koniec": "09:30",
+      "kategoria": "wykład zdalny",
+      "przedmiot": "Podstawy prawa",
+      "sala": "Online"
+    },
+    {
+      "data": "2027-01-15",
+      "dzien": 5,
+      "start": "09:45",
+      "koniec": "11:15",
+      "kategoria": "wykład zdalny",
+      "przedmiot": "Finanse",
+      "sala": "Online"
+    },
+    {
+      "data": "2027-01-19",
+      "dzien": 2,
+      "start": "15:00",
+      "koniec": "16:30",
+      "kategoria": "wykład zdalny",
+      "przedmiot": "Matematyka",
+      "sala": "Online"
+    },
+    {
+      "data": "2027-01-19",
+      "dzien": 2,
+      "start": "16:45",
+      "koniec": "18:15",
+      "kategoria": "wykład zdalny",
+      "przedmiot": "Rachunkowość",
+      "sala": "Online"
+    },
+    {
+      "data": "2027-01-20",
+      "dzien": 3,
+      "start": "09:45",
+      "koniec": "11:15",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Rachunkowość",
+      "sala": "Paw.F 616"
+    },
+    {
+      "data": "2027-01-20",
+      "dzien": 3,
+      "start": "11:30",
+      "koniec": "13:00",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Finanse",
+      "sala": "Paw.F 307"
+    },
+    {
+      "data": "2027-01-20",
+      "dzien": 3,
+      "start": "15:45",
+      "koniec": "16:30",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Podstawy ekonomii środowiska",
+      "sala": "Paw.A 09 lab..komputerowe"
+    },
+    {
+      "data": "2027-01-21",
+      "dzien": 4,
+      "start": "09:45",
+      "koniec": "11:15",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Matematyka",
+      "sala": "Paw.F 515"
+    },
+    {
+      "data": "2027-01-21",
+      "dzien": 4,
+      "start": "11:30",
+      "koniec": "13:00",
+      "kategoria": "ćwiczenia",
+      "przedmiot": "Mikroekonomia",
+      "sala": "Paw.C sala C"
+    },
+    {
+      "data": "2027-01-22",
+      "dzien": 5,
+      "start": "08:00",
+      "koniec": "09:30",
+      "kategoria": "wykład zdalny",
+      "przedmiot": "Podstawy prawa",
+      "sala": "Online"
+    },
+    {
+      "data": "2027-01-22",
+      "dzien": 5,
+      "start": "09:45",
+      "koniec": "11:15",
+      "kategoria": "wykład zdalny",
+      "przedmiot": "Finanse",
+      "sala": "Online"
+    },
+    {
+      "data": "2027-01-27",
+      "dzien": 3,
+      "start": "09:45",
+      "koniec": "12:15",
+      "kategoria": "egzamin",
+      "przedmiot": "Matematyka",
+      "sala": "Paw.C sala D, Paw.C sala E, Paw.C sala F"
+    },
+    {
+      "data": "2027-02-02",
+      "dzien": 2,
+      "start": "09:45",
+      "koniec": "13:00",
+      "kategoria": "egzamin",
+      "przedmiot": "Podstawy ekonomii środowiska",
+      "sala": "Paw.C sala D"
+    },
+    {
+      "data": "2027-02-18",
+      "dzien": 4,
+      "start": "08:45",
+      "koniec": "11:15",
+      "kategoria": "egzamin",
+      "przedmiot": "Matematyka",
+      "sala": "Paw.C  Nowa Aula, Paw.C sala D, Paw.C sala E, Paw.C sala F"
+    }
+  ]
+}

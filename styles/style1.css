@@ -89,6 +89,19 @@ button.aktywny {
     opacity: 0.65;
 }
 
+.kat-odwolane {
+    border-left-color: #cbd5e1;
+    background: #f8fafc;
+    opacity: 0.6;
+}
+.kat-odwolane strong {
+    text-decoration: line-through;
+}
+.kat-odwolane .tag-kategoria {
+    background: #e2e8f0;
+    color: #64748b;
+}
+
 .naglowek-karty {
     display: flex;
     justify-content: space-between;

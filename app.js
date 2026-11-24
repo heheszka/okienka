@@ -22,11 +22,13 @@ function sprawdzStatusOsoby(osoba, wymuszonyTydzien = null) {
 
     //zajęcia tylko z dzisiaj (dla .ics sprawdzamy konkretną datę, dla ręcznych dzień i tydzień)
     const zajeciaDzis = osoba.zajecia
+        .filter(z => z.kategoria !== "odwołane") // <--- Ignorujemy odwołane przy liczeniu statusu!
         .filter(z => {
             if (z.data) return z.data === dzisStr;
             return z.dzien === aktualnyDzien && (z.tydzien === "wszystkie" || z.tydzien === aktualnyTydzien);
         })
         .sort((a, b) => naMinuty(a.start) - naMinuty(b.start));
+
 
   // Przypadek A: Brak zajęć dzisiaj (np. weekend lub wolny dzień)
     if (zajeciaDzis.length === 0) {
