@@ -173,7 +173,7 @@ async function pobierzPlanZLinku(imieOsoby, linkIcs) {
 }
 
 // Synchronizacja planu Oli z UEK
-const linkOliUek = "https://a2c.uek.krakow.pl" + "/api/calendar?url=https%3A%2F%2Fplanzajec.uek.krakow.pl%2Findex.php%3Ftyp%3DG%26id%3D188531%26okres%3D3&lektoraty=1";
+const linkOliUek = "https://uek.krakow.pl" + "/index.php?typ=G&id=188531&okres=3&format=ics";
 pobierzPlanZLinku("Ola", linkOliUek);
 
 

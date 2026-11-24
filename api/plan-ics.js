@@ -1,5 +1,3 @@
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
-
 module.exports = async function handler(req, res) {
     const linkIcs = req.query.url;
     if (!linkIcs) {
