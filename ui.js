@@ -43,14 +43,24 @@ function ustawTydzien(typ) {
 function generujHtmlPelnegoPlanu(zajecia) {
     const aktywnyTydzien = wybranyTydzien || pobierzTypTygodnia(new Date());
     let html = "";
+    const kolejnoscDni = new Array(1, 2, 3, 4, 5, 6, 0);
 
-    // Kolejność wyświetlania dni: od Poniedziałku (1) do Soboty (6), a na końcu Niedziela (0)
-    const kolejnoscDni =new Array(1, 2, 3, 4, 5, 6, 0);
+    // Wyliczamy zakres dat bieżącego tygodnia (Poniedziałek - Niedziela) dla planów .ics
+    const teraz = new Date();
+    const dzienTyg = teraz.getDay() || 7; // Pn=1 ... Nd=7
+    const poniedzialek = new Date(teraz.getFullYear(), teraz.getMonth(), teraz.getDate() - (dzienTyg - 1));
+    const niedziela = new Date(poniedzialek.getFullYear(), poniedzialek.getMonth(), poniedzialek.getDate() + 6);
+    
+    const ponStr = `${poniedzialek.getFullYear()}-${String(poniedzialek.getMonth() + 1).padStart(2, "0")}-${String(poniedzialek.getDate()).padStart(2, "0")}`;
+    const ndStr = `${niedziela.getFullYear()}-${String(niedziela.getMonth() + 1).padStart(2, "0")}-${String(niedziela.getDate()).padStart(2, "0")}`;
 
     kolejnoscDni.forEach(dzien => {
         const zajeciaDnia = zajecia
             .filter(z => z.dzien === dzien)
-            .filter(z => z.tydzien === "wszystkie" || z.tydzien === aktywnyTydzien)
+            .filter(z => {
+                if (z.data) return z.data >= ponStr && z.data <= ndStr; // Tylko bieżący tydzień z .ics
+                return z.tydzien === "wszystkie" || z.tydzien === aktywnyTydzien;
+            })
             .sort((a, b) => naMinuty(a.start) - naMinuty(b.start));
 
         if (zajeciaDnia.length > 0) {
@@ -135,4 +145,35 @@ function zmienEkran(idEkranu, kliknietyPrzycisk) {
     // Przewiń na samą górę po zmianie zakładki
     window.scrollTo(0, 0);
 }
+
+async function pobierzPlanZLinku(imieOsoby, linkIcs) {
+    const kluczCache = `plan_ics_${imieOsoby}`;
+    const osoba = planyZnajomych.find(o => o.imie === imieOsoby);
+    if (!osoba) return;
+
+    const zapisane = localStorage.getItem(kluczCache);
+    if (zapisane) {
+        osoba.zajecia = JSON.parse(zapisane);
+        odswiezEkran();
+    }
+
+    try {
+        const res = await fetch(`/api/plan-ics?url=${encodeURIComponent(linkIcs)}`);
+        if (res.ok) {
+            const dane = await res.json();
+            if (dane.zajecia && dane.zajecia.length > 0) {
+                osoba.zajecia = dane.zajecia;
+                localStorage.setItem(kluczCache, JSON.stringify(dane.zajecia));
+                odswiezEkran();
+            }
+        }
+    } catch (e) {
+        console.log("Używam zapisanego planu offline dla:", imieOsoby);
+    }
+}
+
+// Synchronizacja planu Oli z UEK
+const linkOliUek = "https://a2c.uek.krakow.pl" + "/api/calendar?url=https%3A%2F%2Fplanzajec.uek.krakow.pl%2Findex.php%3Ftyp%3DG%26id%3D188531%26okres%3D3&lektoraty=1";
+pobierzPlanZLinku("Ola", linkOliUek);
+
 

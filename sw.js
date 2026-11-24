@@ -1,4 +1,4 @@
-const NAZWA_CACHE = "okienka-v5";
+const NAZWA_CACHE = "okienka-v6";
 
 const plikiDoZapisu = new Array(
     "./",
@@ -17,7 +17,7 @@ const plikiDoZapisu = new Array(
 self.addEventListener("install", event => {
     event.waitUntil(
         caches.open(NAZWA_CACHE).then(cache => {
-        return cache.addAll(plikiDoZapisu);
+            return cache.addAll(plikiDoZapisu);
         })
     );
     self.skipWaiting();
@@ -26,24 +26,27 @@ self.addEventListener("install", event => {
 self.addEventListener("activate", event => {
     event.waitUntil(
         caches.keys().then(klucze => {
-        return Promise.all(
-            klucze
-            .filter(klucz => klucz !== NAZWA_CACHE)
-            .map(klucz => caches.delete(klucz))
-        );
+            return Promise.all(
+                klucze
+                    .filter(klucz => klucz !== NAZWA_CACHE)
+                    .map(klucz => caches.delete(klucz))
+            );
         })
     );
     self.clients.claim();
 });
 
 self.addEventListener("fetch", event => {
+    // Nie zapisuj w cache zapytań do API (tym zajmuje się localStorage)
+    if (event.request.url.includes("/api/")) return;
+
     event.respondWith(
         fetch(event.request)
-        .then(odpowiedz => {
-            const kopia = odpowiedz.clone();
-            caches.open(NAZWA_CACHE).then(cache => cache.put(event.request, kopia));
-            return odpowiedz;
-        })
-        .catch(() => caches.match(event.request))
+            .then(odpowiedz => {
+                const kopia = odpowiedz.clone();
+                caches.open(NAZWA_CACHE).then(cache => cache.put(event.request, kopia));
+                return odpowiedz;
+            })
+            .catch(() => caches.match(event.request))
     );
 });

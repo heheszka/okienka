@@ -18,12 +18,15 @@ function sprawdzStatusOsoby(osoba, wymuszonyTydzien = null) {
     const aktualnyDzien = teraz.getDay(); // 1 = Pon, 5 = Pt, 0 = Nd, 6 = Sob
     const aktualneMinuty = teraz.getHours() * 60 + teraz.getMinutes();
     const aktualnyTydzien = wymuszonyTydzien || pobierzTypTygodnia(teraz);
+    const dzisStr = `${teraz.getFullYear()}-${String(teraz.getMonth() + 1).padStart(2, "0")}-${String(teraz.getDate()).padStart(2, "0")}`;
 
-    //zajęcia tylko z dzisiaj i z odpowiedniego tygodnia
+    //zajęcia tylko z dzisiaj (dla .ics sprawdzamy konkretną datę, dla ręcznych dzień i tydzień)
     const zajeciaDzis = osoba.zajecia
-    .filter(z => z.dzien === aktualnyDzien)
-    .filter(z => z.tydzien === "wszystkie" || z.tydzien === aktualnyTydzien)
-    .sort((a, b) => naMinuty(a.start) - naMinuty(b.start));
+        .filter(z => {
+            if (z.data) return z.data === dzisStr;
+            return z.dzien === aktualnyDzien && (z.tydzien === "wszystkie" || z.tydzien === aktualnyTydzien);
+        })
+        .sort((a, b) => naMinuty(a.start) - naMinuty(b.start));
 
   // Przypadek A: Brak zajęć dzisiaj (np. weekend lub wolny dzień)
     if (zajeciaDzis.length === 0) {
