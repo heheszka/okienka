@@ -1,25 +1,29 @@
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
     const linkIcs = req.query.url;
     if (!linkIcs) {
         return res.status(400).json({ error: "Brak parametru ?url=..." });
     }
 
     try {
-        const odpowiedz = await fetch(linkIcs);
+        const odpowiedz = await fetch(linkIcs, {
+            headers: {
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+            }
+        });
+
         if (!odpowiedz.ok) {
-            return res.status(502).json({ error: "Błąd pobierania z serwera uczelni" });
+            return res.status(502).json({ error: `Błąd UEK: ${odpowiedz.status}` });
         }
 
         const tekstIcs = await odpowiedz.text();
         const zajecia = parsujIcsUek(tekstIcs);
 
-        // Cache na 1 godzinę na serwerze Vercel
         res.setHeader("Cache-Control", "s-maxage=3600, stale-while-revalidate");
         return res.status(200).json({ zajecia });
     } catch (blad) {
         return res.status(500).json({ error: blad.message });
     }
-}
+};
 
 function parsujIcsUek(tekst) {
     const czystyTekst = tekst.replace(/\r?\n[ \t]/g, "");
@@ -32,7 +36,6 @@ function parsujIcsUek(tekst) {
         if (linia === "BEGIN:VEVENT") {
             aktualne = {};
         } else if (linia === "END:VEVENT" && aktualne) {
-            // Pomijamy zajęcia przeniesione/odwołane "(przen ...)"
             const czyPrzeniesione = aktualne.przedmiot && aktualne.przedmiot.toLowerCase().includes("(przen");
             if (!czyPrzeniesione && aktualne.data && aktualne.start && aktualne.koniec) {
                 wynik.push(aktualne);
@@ -54,11 +57,9 @@ function parsujIcsUek(tekst) {
             } else if (linia.startsWith("SUMMARY")) {
                 const surowaNazwa = linia.split(":").slice(1).join(":").replace(/\\,/g, ",").trim();
                 aktualne.kategoria = wykryjKategorieUek(surowaNazwa);
-                // Usuwamy z nazwy licznik spotkań typu "(ćw 9/15)" żeby nazwa była czysta
                 aktualne.przedmiot = surowaNazwa.replace(/\s*\([^)]*\d+\/\d+\)\s*$/, "").trim();
             } else if (linia.startsWith("LOCATION")) {
                 let sala = linia.split(":").slice(1).join(":").replace(/\\,/g, ",").trim();
-                // Jeśli w miejscu sali jest link UEK -> zamieniamy na "Online" i kategorię na zdalną
                 if (sala.startsWith("http")) {
                     sala = "Online";
                     if (aktualne.kategoria === "wykład") {
