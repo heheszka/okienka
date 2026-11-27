@@ -356,9 +356,9 @@
       "dzien": 2,
       "start": "15:00",
       "koniec": "16:30",
-      "kategoria": "wykład zdalny",
+      "kategoria": "wykład",
       "przedmiot": "Matematyka",
-      "sala": "Online"
+      "sala": ""
     },
     {
       "data": "2026-10-27",
@@ -374,9 +374,9 @@
       "dzien": 2,
       "start": "18:30",
       "koniec": "20:00",
-      "kategoria": "wykład zdalny",
+      "kategoria": "wykład",
       "przedmiot": "Mikroekonomia",
-      "sala": "Online"
+      "sala": ""
     },
     {
       "data": "2026-10-28",
